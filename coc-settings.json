@@ -1,0 +1,5 @@
+{
+  "snippets.ultisnips.pythonPrompt": false,
+  "suggest.enablePreselect": true,
+  "coc.preferences.formatOnSave": true
+}
