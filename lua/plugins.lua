@@ -1,6 +1,8 @@
 -- Install packer
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
+
 local is_bootstrap = false
+
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   is_bootstrap = true
   vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path }
@@ -17,7 +19,15 @@ require('packer').startup(function(use)
 
   use { -- autopair completion
     'jiangmiao/auto-pairs'
+  }
 
+  use { -- gruvbox colorscheme
+    'morhetz/gruvbox'
+
+  }
+
+  use { -- para los comentarios
+    'preservim/nerdcommenter'
   }
 
   -- Ntree
@@ -78,6 +88,7 @@ require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'lewis6991/gitsigns.nvim'
+
 
   use 'navarasu/onedark.nvim' -- Theme inspired by Atom
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
