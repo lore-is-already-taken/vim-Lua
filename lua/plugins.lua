@@ -13,8 +13,14 @@ require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
 
+  use 'prisma/vim-prisma' -- para trabajar con prisma
+
   use { --EasyMotion
     'easymotion/vim-easymotion'
+  }
+
+  use {
+    'airblade/vim-rooter'
   }
 
   use { -- autopair completion

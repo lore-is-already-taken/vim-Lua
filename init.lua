@@ -121,9 +121,13 @@ vim.keymap.set('n', '<leader>/', function()
   })
 end, { desc = '[/] Fuzzily search in current buffer]' })
 
---  vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>sf', function()
+  local project_root = vim.fn.FindRootDirectory()
+  require('telescope.builtin').find_files({ cwd = project_root, desc = '[S]earch [F]iles', file_ignore_patterns = { 'node_modules' } })
+end
+)
 --  vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
---  vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
+--vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 --  vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 --  vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 
@@ -225,7 +229,7 @@ local on_attach = function(_, bufnr)
 
   -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-  nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+  --nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
   -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
@@ -251,12 +255,12 @@ local servers = {
   -- rust_analyzer = {},
   -- tsserver = {},
 
-  sumneko_lua = {
-    Lua = {
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
-    },
-  },
+  --[[sumneko_lua = {]]
+  --[[Lua = {]]
+  --[[workspace = { checkThirdParty = false },]]
+  --[[telemetry = { enable = false },]]
+  --[[},]]
+  --[[}]]
 }
 
 -- Setup neovim lua configuration
@@ -310,24 +314,26 @@ cmp.setup {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
+    -- [[ esto fue desabilitado para que GithubCopilot Funcione ]]
+
+    --[[['<Tab>'] = cmp.mapping(function(fallback)]]
+    --[[if cmp.visible() then]]
+    --[[cmp.select_next_item()]]
+    --[[elseif luasnip.expand_or_jumpable() then]]
+    --[[luasnip.expand_or_jump()]]
+    --[[else]]
+    --[[fallback()]]
+    --[[end]]
+    --[[end, { 'i', 's' }),]]
+    --[[['<S-Tab>'] = cmp.mapping(function(fallback)]]
+    --[[if cmp.visible() then]]
+    --[[cmp.select_prev_item()]]
+    --[[elseif luasnip.jumpable(-1) then]]
+    --[[luasnip.jump(-1)]]
+    --[[else]]
+    --[[fallback()]]
+    --[[end]]
+    --[[end, { 'i', 's' }),]]
   },
   sources = {
     { name = 'nvim_lsp' },
