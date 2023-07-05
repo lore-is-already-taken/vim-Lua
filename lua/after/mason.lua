@@ -9,4 +9,4 @@ require('mason').setup({
     },
     --automatic_installation = { 'black', 'mypy', 'ruff', 'stylua', },
     -- Install the desired language servers
-    })
+})

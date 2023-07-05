@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>w", ":w<cr>", { desc = "Save the current File" })
 vim.keymap.set("n", "<leader>q", ":q<cr>", { desc = "Exit the current File" })
-vim.keymap.set("n", "<leader>ee", ":w<cr> :q<cr>", { desc = "Save and Exit the current File" })
+vim.keymap.set("n", "<leader>e", ":w<cr> :q<cr>", { desc = "Save and Exit the current File" })
 vim.keymap.set("n", "<c-l>", "<c-w>l ", { desc = "Move cursor to right window" })
 vim.keymap.set("n", "<c-h>", "<c-w>h ", { desc = "Move cursor to left window" })
 vim.keymap.set("n", "<c-k>", "<c-w>k ", { desc = "Move cursor to up window" })
@@ -12,6 +12,8 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.opt.relativenumber = true
+vim.opt.number = true
+vim.opt.cursorline = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
