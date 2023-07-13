@@ -1,4 +1,5 @@
-require('mason').setup({
+require('mason').setup(
+{
     ensure_installed = {
         'lua_ls',
         'pyright',

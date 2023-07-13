@@ -91,9 +91,9 @@ require("packer").startup(function(use)
 	})
 	use({
 		"williamboman/mason.nvim", -- Optional
-		build = function()
-			pcall(vim.cmd, "MasonUpdate")
-		end,
+		--build = function()
+		--pcall(vim.cmd, "MasonUpdate")
+		--end,
 		opts = {
 			ensure_installed = {
 				"ruff",
