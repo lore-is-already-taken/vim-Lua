@@ -3,4 +3,4 @@ require("after")
 
 -- Enable `lukas-reineke/indent-blankline.nvim`
 -- See `:help indent_blankline.txt`
-vim.cmd("colorscheme rose-pine-moon")
+vim.cmd("colorscheme catppuccin")
