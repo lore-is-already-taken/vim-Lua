@@ -82,13 +82,6 @@ require("nvim-tree").setup({
 	view = {
 		side = "right",
 		adaptive_size = true,
-		mappings = {
-			--list = {
-			--{ key = "u", action = "dir_up" },
-			--{ key = "s", action = "vsplit" },
-			--{ key = "o", action = "split" },
-			--},
-		},
 		float = {
 			enable = true,
 			quit_on_focus_loss = true,
