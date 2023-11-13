@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>w", ":w<cr>", { desc = "Save the current File" })
 vim.keymap.set("n", "<leader>q", ":q<cr>", { desc = "Exit the current File" })
-vim.keymap.set("n", "<leader>e", ":w<cr> :q<cr>", { desc = "Save and Exit the current File" })
+vim.keymap.set("n", "<leader>e", ":wq<cr>", { desc = "Save and Exit the current File" })
 vim.keymap.set("n", "<c-l>", "<c-w>l ", { desc = "Move cursor to right window" })
 vim.keymap.set("n", "<c-h>", "<c-w>h ", { desc = "Move cursor to left window" })
 vim.keymap.set("n", "<c-k>", "<c-w>k ", { desc = "Move cursor to up window" })
@@ -40,5 +40,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
+vim.o.clipboard = "unnamedplus"
 
 --vim.opt.colorcolumn = "90"
