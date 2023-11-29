@@ -6,3 +6,5 @@ require("after.indent-blankline")
 require("after.lualine")
 require("after.neodev")
 require("after.conform")
+
+vim.cmd("colorscheme catppuccin")

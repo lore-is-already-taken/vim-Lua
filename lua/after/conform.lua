@@ -8,11 +8,13 @@ conform.setup({
 		-- Use a sub-list to run only the first available formatter
 		javascript = { { "prettierd", "prettier" } },
 	},
-	format_on_save = {
-		lsp_fallback = false,
-		async = false,
-		timeout = 500,
-	},
+	--[[
+	   [format_on_save = {
+	   [    lsp_fallback = true,
+	   [    async = false,
+	   [    timeout = 500,
+	   [},
+       ]]
 })
 
 vim.keymap.set("n", "<leader>mp", function()
