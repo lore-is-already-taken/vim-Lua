@@ -7,4 +7,4 @@ require("after.lualine")
 require("after.neodev")
 require("after.conform")
 
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme rose-pine-moon")

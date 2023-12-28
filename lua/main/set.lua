@@ -11,6 +11,11 @@ vim.keymap.set("n", "<c-j>", "<c-w>j ", { desc = "Move cursor to down window" })
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+--open Mason
+vim.keymap.set("n", "<leader>ms", ":Mason<cr>", { desc = "Open Mason menu" })
+--open Lazy
+vim.keymap.set("n", "<leader>lz", ":Lazy<cr>", { desc = "Open Lazy menu" })
+
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.cursorline = true
