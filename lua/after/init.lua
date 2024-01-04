@@ -6,5 +6,6 @@ require("after.indent-blankline")
 require("after.lualine")
 require("after.neodev")
 require("after.conform")
+require("after.debugging")
 
-vim.cmd("colorscheme rose-pine-moon")
+vim.cmd("colorscheme catppuccin-mocha")
