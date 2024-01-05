@@ -5,8 +5,9 @@ return {
 	{ "shaunsingh/nord.nvim" },
 	{ "navarasu/onedark.nvim" },
 	{ "rose-pine/neovim" },
-    {'olivercederborg/poimandres.nvim'},
-    {'tiagovla/tokyodark.nvim'},
-    {'ribru17/bamboo.nvim'},
-    {'cryptomilk/nightcity.nvim'}
+	{ "olivercederborg/poimandres.nvim" },
+	{ "tiagovla/tokyodark.nvim" },
+	{ "ribru17/bamboo.nvim" },
+	{ "cryptomilk/nightcity.nvim" },
+	{ "EdenEast/nightfox.nvim" },
 }
