@@ -47,3 +47,20 @@ require("lspconfig").biome.setup({
 		},
 	},
 })
+
+require("lspconfig").emmet_ls.setup({
+	on_attach = on_attach,
+	settings = {
+		filetypes = {
+			"html",
+		},
+	},
+})
+require("lspconfig").ast_grep.setup({
+	on_attach = on_attach,
+	settings = {
+		filetypes = {
+			"kotlin",
+		},
+	},
+})
